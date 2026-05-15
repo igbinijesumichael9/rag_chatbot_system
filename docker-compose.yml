@@ -1,0 +1,16 @@
+services:
+
+  rag_chatbot_api:
+
+    build: .
+
+    container_name: rag_chatbot_api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./artifacts:/app/artifacts
+      - ./data:/app/data
+
+    restart: always
